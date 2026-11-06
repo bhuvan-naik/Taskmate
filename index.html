@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHUVAN - Student Productivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TaskMate</h1>
+        <p>Your personal student productivity manager</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Add a Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskTitle"
+                    placeholder="Task title" required>
+                <input type="text" id="taskSubject"
+                    placeholder="Subject or category">
+                <input type="date" id="taskDeadline">
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>My Tasks</h2>
+            <div class="filters">
+                <button type="button" data-filter="all">All</button>
+                <button type="button" data-filter="pending">Pending</button>
+                <button type="button" data-filter="completed">Completed</button>
+            </div>
+            <div id="taskList"></div>
+            <p id="emptyMessage">No tasks yet. Add your first task!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
